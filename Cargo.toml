@@ -1,0 +1,17 @@
+[package]
+name = "rs-test"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+random_wgsl = "0.1.2"
+wesl = "0.1.2"
+
+[build-dependencies]
+random_wgsl = "0.1.2"
+wesl = "0.1.2"
+
+[features]
+# use WESL at build-time (in build.rs) instead of run-time (in main.rs)
+# default = ["build-time"]
+build-time = []
