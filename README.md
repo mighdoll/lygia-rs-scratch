@@ -26,5 +26,5 @@ TODO:
 - (lee) chore: push lygia wesl fixes upstream
 - (lee) chore: file WESL issue for lygia re: plugging in raymarch map function
 - fix: -rs parsing of umlauts
-- feat: -rs error reporting on parsing failure
+- feat: -rs error reporting on parsing failure during packaging validation
 - fix: -rs support for package paths that conflict with rust keywords.
