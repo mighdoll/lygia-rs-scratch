@@ -1,4 +1,4 @@
-import lygia::lighting::common::schlick::schlick;
+// import lygia::lighting::common::schlick::schlick;
 
 /*
 contributors: Patricio Gonzalez Vivo
@@ -8,6 +8,6 @@ license:
     - Copyright (c) 2021 Patricio Gonzalez Vivo under Patron License - https://lygia.xyz/license
 */
 
-fn fresnel(f0: f32, NoV: f32) -> f32 {
-    return schlick(f0, 1.0, NoV);
-}
+// fn fresnel(f0: f32, NoV: f32) -> f32 {
+//     return schlick(f0, 1.0, NoV);
+// }

@@ -1,4 +1,4 @@
-import lygia::lighting::common::ggx::GGX;
+// import lygia::lighting::common::ggx::GGX; // temporarily disabled, due to 'common' conflicting in wesl-rs
 
 fn specularCookTorrance(L: vec3f, N: vec3f, V: vec3f, NoV: f32, NoL: f32, roughness: f32, fresnel: f32) -> f32 {
     // Half angle vector
@@ -12,7 +12,8 @@ fn specularCookTorrance(L: vec3f, N: vec3f, V: vec3f, NoV: f32, NoL: f32, roughn
     let G = min(1.0, min(x * NoV, x * NoL));
     
     // Distribution term
-    let D = GGX(N, H, NoH, roughness);
+//    let D = GGX(N, H, NoH, roughness);
+    let D = 1.0; // temporarily disabled, due to 'common' conflicting in wesl-rs
 
     // Fresnel term
     let F = pow(1.0 - NoV, fresnel);
