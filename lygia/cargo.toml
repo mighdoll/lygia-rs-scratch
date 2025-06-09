@@ -1,0 +1,29 @@
+[package]
+name = "lygia"
+description = "shader utility functions for WGSL/WESL"
+
+publish = false
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+path = "src/lib.rs"
+
+[build-dependencies]
+random_wgsl = "0.1.2"
+
+[build-dependencies.wesl]
+# git = "https://github.com/wgsl-tooling-wg/wesl-rs"
+#branch = "main"
+path = "../../wesl-rs/crates/wesl"
+features = ["package"]
+
+[dependencies.wesl]
+# git = "https://github.com/wgsl-tooling-wg/wesl-rs"
+#branch = "main"
+path = "../../wesl-rs/crates/wesl"
+features = ["package"]
+
+[lints.rust]
+# some of the module names don't follow rust style
+non_snake_case = "allow"
