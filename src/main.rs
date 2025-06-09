@@ -9,7 +9,7 @@ fn main() {
     // run wesl at run-time
     #[cfg(not(feature = "build-time"))]
     let source = wesl::Wesl::new("src/shaders")
-        .add_package(&lygia::lygia::math::cubic::Mod)
+        .add_package(&lygia::lygia::Mod)
         .compile("main")
         .inspect_err(|e| {
             eprintln!("{e}");
