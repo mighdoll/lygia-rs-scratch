@@ -50,7 +50,7 @@ fn unpack(v: vec3f, base: f32) -> f32 {
     return dot(v, f) / base3;
 }
 
-fn unpack(v: vec3f) -> f32 { return unpack256(v); }
+// fn unpack(v: vec3f) -> f32 { return unpack256(v); }
 
 // https://github.com/mrdoob/three.js/blob/acdda10d5896aa10abdf33e971951dbf7bd8f074/src/renderers/shaders/ShaderChunk/packing.glsl
 fn unpack4(v: vec4f ) -> f32 { return dot( v, UnpackFactors ); }
