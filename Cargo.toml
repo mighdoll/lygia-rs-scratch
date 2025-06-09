@@ -4,12 +4,22 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-random_wgsl = "0.1.2"
-wesl = "0.1.2"
+lygia = { path = "./lygia", version = "*" }
+
+[dependencies.wesl]
+# git = "https://github.com/wgsl-tooling-wg/wesl-rs"
+#branch = "main"
+path = "../wesl-rs/crates/wesl"
+features = ["package"]
 
 [build-dependencies]
-random_wgsl = "0.1.2"
-wesl = "0.1.2"
+lygia = { path = "./lygia", version = "*" }
+
+[build-dependencies.wesl]
+# git = "https://github.com/wgsl-tooling-wg/wesl-rs"
+#branch = "main"
+path = "../wesl-rs/crates/wesl"
+features = ["package"]
 
 [features]
 # use WESL at build-time (in build.rs) instead of run-time (in main.rs)

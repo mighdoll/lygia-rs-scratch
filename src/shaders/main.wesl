@@ -1,6 +1,6 @@
-import random::pcg_3u_3u;
+import lygia::lygia::math::cubic;
 
 @compute
-fn main(@builtin(global_invocation_id) index: vec3u) -> vec3u {
-    return pcg_3u_3u(index);
+fn main(@builtin(global_invocation_id) index: vec3u) -> f32 {
+    return cubic(f32(index.x));
 }
