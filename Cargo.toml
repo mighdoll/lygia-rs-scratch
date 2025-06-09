@@ -23,5 +23,5 @@ features = ["package"]
 
 [features]
 # use WESL at build-time (in build.rs) instead of run-time (in main.rs)
-# default = ["build-time"]
+default = ["build-time"]
 build-time = []
