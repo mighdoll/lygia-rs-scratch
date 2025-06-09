@@ -12,3 +12,6 @@
 - importing cubic in wesl fails with module not found.
   - need to debug further..
   - perhaps a handy error message about alternate nearby names would be nice to have here?
+- lexing failed on `Björn` due to the umlauts in validation
+  - temporarily patched the lygia source
+  - added some logging in validation to figure out which source file it was

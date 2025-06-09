@@ -14,7 +14,7 @@ options:
 examples:
     - /shaders/color_mix.frag
 license: 
-    - MIT License (MIT) Copyright (c) 2020 Björn Ottosson
+    - MIT License (MIT) Copyright (c) 2020 Bjorn Ottosson
     - MIT License (MIT) Copyright (c) 2020 Inigo Quilez
 */
 
