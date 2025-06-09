@@ -426,6 +426,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "lygia"
+version = "0.1.0"
+dependencies = [
+ "random_wgsl",
+ "wesl 0.1.2",
+]
+
+[[package]]
 name = "memchr"
 version = "2.7.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -496,6 +504,28 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "925383efa346730478fb4838dbe9137d2a47675ad789c546d150a6e1dd4ab31c"
 
 [[package]]
+name = "proc-macro-error-attr2"
+version = "2.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "96de42df36bb9bba5542fe9f1a054b8cc87e172759a1868aa05c1f3acc89dfc5"
+dependencies = [
+ "proc-macro2",
+ "quote",
+]
+
+[[package]]
+name = "proc-macro-error2"
+version = "2.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "11ec05c52be0a07b08061f7dd003e7d7092e0472bc731b4af7bb1ef876109802"
+dependencies = [
+ "proc-macro-error-attr2",
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
 name = "proc-macro2"
 version = "1.0.95"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -519,7 +549,7 @@ version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cfa72588b9bd6b2b1c58950d23c9a4a78aeb30f60730b6043ba006ad8bf6f09a"
 dependencies = [
- "wesl",
+ "wesl 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -564,8 +594,8 @@ checksum = "2b15c43186be67a4fd63bee50d0303afffcef381492ebe2c5d87f324e1b8815c"
 name = "rs-test"
 version = "0.1.0"
 dependencies = [
- "random_wgsl",
- "wesl",
+ "lygia",
+ "wesl 0.1.2",
 ]
 
 [[package]]
@@ -686,6 +716,34 @@ dependencies = [
 ]
 
 [[package]]
+name = "token_stream_flatten"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4a84dee1c47b2bb20c681c923f68d1700bf04a83a6b316151634bb1915c5ddd7"
+dependencies = [
+ "proc-macro2",
+]
+
+[[package]]
+name = "tokrepr"
+version = "0.0.1"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "tokrepr-derive",
+]
+
+[[package]]
+name = "tokrepr-derive"
+version = "0.0.1"
+dependencies = [
+ "itertools",
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
 name = "typenum"
 version = "1.18.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -734,6 +792,22 @@ dependencies = [
 [[package]]
 name = "wesl"
 version = "0.1.2"
+dependencies = [
+ "annotate-snippets",
+ "derive_more",
+ "half",
+ "itertools",
+ "num-traits",
+ "proc-macro2",
+ "quote",
+ "thiserror",
+ "wesl-macros 0.1.2",
+ "wgsl-parse 0.1.2",
+]
+
+[[package]]
+name = "wesl"
+version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "35a997b82782eb6019bb7c4de169a4e1eb0b96b59495f64fabc724587ff58378"
 dependencies = [
@@ -746,8 +820,21 @@ dependencies = [
  "proc-macro2",
  "quote",
  "thiserror",
- "wesl-macros",
- "wgsl-parse",
+ "wesl-macros 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "wgsl-parse 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "wesl-macros"
+version = "0.1.2"
+dependencies = [
+ "itertools",
+ "proc-macro-error2",
+ "proc-macro2",
+ "quote",
+ "syn",
+ "token_stream_flatten",
+ "wgsl-parse 0.1.2",
 ]
 
 [[package]]
@@ -760,6 +847,21 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
+]
+
+[[package]]
+name = "wgsl-parse"
+version = "0.1.2"
+dependencies = [
+ "annotate-snippets",
+ "derive_more",
+ "itertools",
+ "lalrpop",
+ "lalrpop-util",
+ "lexical",
+ "logos",
+ "thiserror",
+ "tokrepr",
 ]
 
 [[package]]
